@@ -1,0 +1,35 @@
+.main {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+.flex{
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(228, 198, 158, 0.205);
+}
+.h1 {
+  text-align: center;
+  font-weight: 600;
+  font-size: 25px;
+  position: relative;
+  cursor: pointer;
+}
+
+.h1::before {
+  position: absolute;
+  content: "";
+
+  background-image: url("https://cdn.icon-icons.com/icons2/1238/PNG/512/triangledown_83849.png");
+  width: 14px;
+  height: 14px;
+  left: -11%;
+  top: 8%;
+  background-size: cover;
+  cursor: pointer;
+}
+.h2 {
+  font-weight: 500;
+  padding: 0 0 15px 5px;
+  font-size: 22px;
+}

@@ -1,0 +1,55 @@
+.center{
+    text-align: center;
+    
+}
+.mainInfo{
+    position: relative;
+}
+.pizzaOptions {
+    display: flex;
+    flex-direction: column;
+    background-color: bisque;
+    max-width:230px;
+    margin: 0 auto;
+}
+.stage1{
+    display: flex;
+    gap: 20px;
+}
+.stage2{
+    display: flex;
+    gap: 20px;
+}
+.first {
+  grid-area: f;
+  cursor: pointer;
+}
+.second {
+  grid-area: s;
+  cursor: pointer;
+}
+.third{
+    grid-area: third;
+    cursor: pointer;
+}
+.t1{
+    grid: fo;
+    cursor: pointer;
+}
+.price{
+    font-weight: 700;
+    
+}
+.t2{
+    grid-area: fif;
+    cursor: pointer;
+}
+.active{
+    background-color: aliceblue;
+    border: 1px solid aliceblue;
+    border-radius: 6px;
+    padding: 3px;
+}
+.img{
+    max-width: 300px;
+}

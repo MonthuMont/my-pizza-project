@@ -3,11 +3,21 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-
+import List from './List';
+import PizzaComp from './PizzaComp/PizzaComp';
+import pizzas from "./Json/pizzasInfo.json"
+import Sortirovka from './Sortirovka/Sortirovka';
 const root = ReactDOM.createRoot(document.getElementById('root'));
+const cars = ['Bmw','Audi','Toyota','Mitsubishi','Lada','Cock','Wazup']
 root.render(
   <React.StrictMode>
     <App />
+    <List cars = {cars}></List>
+    <Sortirovka></Sortirovka>
+    {pizzas.map((obj)=>(
+      <PizzaComp key={obj.id} title={obj.title} types={obj.types} sizes={obj.sizes} price={obj.price} imageUrl={obj.imageUrl}></PizzaComp>
+    ))}
+    {/* <PizzaComp ></PizzaComp> */}
   </React.StrictMode>
 );
 
