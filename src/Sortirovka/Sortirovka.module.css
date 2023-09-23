@@ -32,4 +32,12 @@
   font-weight: 500;
   padding: 0 0 15px 5px;
   font-size: 22px;
+  cursor: pointer;
+}
+.h2:hover{
+  color: rgba(238, 192, 7, 0.462);
+}
+.active{
+  
+  color: rgba(238, 165, 7, 0.993);
 }

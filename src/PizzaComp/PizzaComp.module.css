@@ -1,9 +1,21 @@
+.wrapper{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    
+   
+}
 .center{
     text-align: center;
+   
+    display: flex;
+    flex-direction: column; 
+    
     
 }
 .mainInfo{
-    position: relative;
+    /* position: relative; */
+    margin: 0 0 0 15px;
 }
 .pizzaOptions {
     display: flex;

@@ -2,7 +2,7 @@ import styles from './List.module.css'
 import React from 'react'
 
 const List = (props) => {
-    let [listActive, setListActive] = React.useState(0);
+    const [listActive, setListActive] = React.useState(0);
 
     console.log(listActive);
     
