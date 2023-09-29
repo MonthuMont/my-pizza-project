@@ -1,0 +1,37 @@
+.korz {
+  background-color: rgba(234, 197, 11, 0.805);
+  padding: 10px 15px;
+  max-height: 30px;
+  border-radius: 6px;
+  text-align: center;
+  cursor: pointer;
+  margin-right: 20px;
+}
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 3px solid black;
+}
+.logoName {
+  font-weight: bold;
+  font-size: 20px;
+}
+.description {
+}
+.logoBlock {
+  margin-left: 40px;
+  background-color: rgba(255, 203, 80, 0.208);
+  border-radius: 15px;
+  padding: 10px 15px;
+  position: relative;
+}
+.logoBlock::before {
+  position: absolute;
+  content: "";
+  background-image: url("https://yt3.googleusercontent.com/hAKut8LyemNqlmX8ppRuq0SnAezXJ3t3JoW92fcRj4gnex7NDSH8gOxX2615PUbSWO-StN1m=s900-c-k-c0x00ffffff-no-rj");
+  height: 50px;
+  left: -17%;
+  top: 3%;
+  background-size: cover;
+  width: 50px;
+}

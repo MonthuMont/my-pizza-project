@@ -1,32 +1,29 @@
 import logo from "./logo.svg";
 import "./App.scss";
 import React from "react";
-
 import List from "./List";
-import PizzaComp from "./PizzaComp/PizzaComp";
-// import pizzas from "./Json/pizzasInfo.json";
-import Sortirovka from "./Sortirovka/Sortirovka";
-const cars = ["Bmw", "Audi", "Toyota", "Mitsubishi", "Lada", "Cock", "Wazup"];
+
+import Korzina from "./Korzina/Korzina";
+import NotFound from "./pages/NotFound";
+import Cart from "./pages/Cart";
+import { Routes, Route } from "react-router-dom";
+
+import Home from "./pages/Home";
+
+const cars = [
+  "Bmw",
+  "Audi",
+  "Toyota",
+  "Mitsubishi",
+  "Lada",
+  "Mercedes",
+  "Wazup",
+];
 function App(props) {
   const [count, setCount] = React.useState(0);
   const countOnClick = () => {
     setCount(count + 1);
   };
-  const [items, setItems] = React.useState([]);
-  React.useEffect(() => {
-    fetch("https://64f981f24098a7f2fc1484a0.mockapi.io/items")
-      .then((res) => res.json())
-      .then((arr) => {
-        console.log(arr);
-        console.log('Hello');
-        
-
-        setItems(arr);
-        console.log("Items:", items);
-      });
-  }, []);
-
-  
 
   return (
     <div className="App">
@@ -56,23 +53,19 @@ function App(props) {
         </div>
       </header>
       <List cars={cars}></List>
-      <Sortirovka></Sortirovka>
-      <div className="container">
-        <div className="wrapper">
-          {items.map((obj) => (
-            <PizzaComp
-              key={obj.id}
-              title={obj.title}
-              types={obj.types}
-              sizes={obj.sizes}
-              price={obj.price}
-              imageUrl={obj.imageUrl}
-            ></PizzaComp>
-          ))}
-        </div>
-      </div>
+      <Korzina></Korzina>
+      <Routes>
+        
+          <Route path="/korzina/" element={<Cart></Cart>}></Route>
+        
+
+        <Route path="/home/" element={<Home></Home>}></Route>
+        <Route path="/" element={<Home></Home>}></Route>
+        <Route path="*" element={<NotFound></NotFound>}></Route>
+      </Routes>
+
+      {/* <Home></Home> */}
     </div>
   );
 }
-
 export default App;

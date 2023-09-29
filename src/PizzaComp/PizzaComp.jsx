@@ -5,6 +5,7 @@ const PizzaParametrs = (props) => {
   let [stateType, setStateType] = React.useState(9);
   const pizzaNames = ["Тонкое", "Традиционное"];
   const [open, setOpen] = React.useState(false);
+  const [choose, setChoose] = React.useState(false);
   let statable = true;
   // let bool = () => {
   //   return statable = !statable;
@@ -34,9 +35,10 @@ const PizzaParametrs = (props) => {
           <p
             onClick={() => {
               setState((state = Number(index)));
+              setChoose(!choose);
             }}
             className={
-              state === Number(index)
+              state === Number(index) && choose
                 ? [styles.third, styles.active].join(" ")
                 : styles.third
             }
@@ -62,10 +64,14 @@ const PizzaComp = (pizzas) => {
             sizes={pizzas.sizes}
             key={pizzas.id}
           ></PizzaParametrs>
-          <div className={styles.price}>От {pizzas.price}</div>
+          <div className={styles.wrap}>
+            <div className={styles.price}>От {pizzas.price}</div>
+            <div>
+              <button className={styles.btn}>Купить</button>
+            </div>
+          </div>
         </div>
       </div>
-      
     </div>
   );
 };

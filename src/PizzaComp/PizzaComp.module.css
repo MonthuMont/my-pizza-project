@@ -50,6 +50,10 @@
 }
 .price{
     font-weight: 700;
+    background-color: rgba(184, 135, 11, 0.359);
+    border: 1px solid black;
+    border-radius: 6px;
+    padding: 5px 10px;
     
 }
 .t2{
@@ -64,4 +68,16 @@
 }
 .img{
     max-width: 300px;
+}
+
+.wrap{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-evenly;
+}
+.btn{
+    border-radius: 6px;
+    background-color: darkgoldenrod;
+    padding: 7px 10px;
+    cursor: pointer;
 }
